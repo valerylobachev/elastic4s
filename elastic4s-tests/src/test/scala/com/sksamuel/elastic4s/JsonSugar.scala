@@ -2,7 +2,7 @@ package com.sksamuel.elastic4s
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+import com.fasterxml.jackson.module.scala.ScalaObjectMapper
 import org.scalatest.Matchers
 import org.scalatest.matchers.{Matcher, MatchResult}
 

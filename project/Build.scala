@@ -10,7 +10,7 @@ object Build extends AutoPlugin {
   override def requires = JvmPlugin
 
   object autoImport {
-    val org                    = "com.sksamuel.elastic4s"
+    val org                    = "biz.lobachev.elastic4s"
     val AkkaVersion            = "2.5.25"
     val AkkaHttpVersion        = "10.1.9"
     val CatsVersion            = "2.0.0-RC1"
@@ -19,7 +19,7 @@ object Build extends AutoPlugin {
     val CommonsIoVersion       = "2.6"
     val ElasticsearchVersion   = "7.3.1"
     val ExtsVersion            = "1.61.1"
-    val JacksonVersion         = "2.9.9"
+    val JacksonVersion         = "2.10.1"
     val Json4sVersion          = "3.6.7"
     val AWSJavaSdkVersion      = "2.7.1"
     val Log4jVersion           = "2.12.1"
@@ -42,8 +42,8 @@ object Build extends AutoPlugin {
 
   override def projectSettings: Seq[Def.Setting[_]] = Seq(
     organization := org,
-    scalaVersion := "2.12.9",
-    crossScalaVersions := Seq("2.12.9", "2.13.0"),
+    scalaVersion := "2.13.1",
+    crossScalaVersions := Seq("2.12.10", "2.13.1"),
     publishMavenStyle := true,
     resolvers += Resolver.mavenLocal,
     resolvers += Resolver.url("https://artifacts.elastic.co/maven"),
@@ -75,7 +75,7 @@ object Build extends AutoPlugin {
     if (isTravis) {
       version := s"7.3.2.$travisBuildNumber-SNAPSHOT"
     } else {
-      version := "7.3.1"
+      version := "7.3.1-lagom"
     },
     publishTo := {
       val nexus = "https://oss.sonatype.org/"
